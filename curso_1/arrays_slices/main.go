@@ -46,4 +46,21 @@ func main() {
 
 	slice2[1] = 10
 	fmt.Println(slice2)
+
+	// Arrays internos
+
+	slice3 := make([]int, 10, 11) // alocando espaço
+	fmt.Println("slice3: ", slice3, " len ", len(slice3), " cap ", cap(slice3))
+
+	// estourando a capacidade para ver o comportamento do slice
+
+	slice3 = append(slice3, 22)
+	slice3 = append(slice3, 45)
+	fmt.Println("slice3: ", slice3, " len ", len(slice3), " cap ", cap(slice3))
+	// o slice dobrou a capacidade
+
+	//make sem o parametro de capacidade
+	slice4 := make([]int, 5)
+	fmt.Println("slice4: ", slice4, " len ", len(slice4), " cap ", cap(slice4))
+
 }
