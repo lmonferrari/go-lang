@@ -26,7 +26,7 @@ func main() {
 	regex := regexp.MustCompile("Torrent hash: [0-9A-F]{40}")
 	hash := regex.FindString(string(body))
 
-	fmt.Print(hash)
+	fmt.Println(hash)
 
 	defer resp.Body.Close()
 }
