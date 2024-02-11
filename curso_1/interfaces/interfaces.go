@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"math"
+)
 
 // Interfaces são tipos que definem um comportamento
 type forma interface {
@@ -28,7 +31,7 @@ func (r *retangulo) area() float64 {
 }
 
 func (c *circulo) area() float64 {
-	return 3.14 * c.raio * c.raio
+	return math.Pi * math.Pow(c.raio, 2)
 }
 
 func main() {
